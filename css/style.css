@@ -1,0 +1,101 @@
+*{
+    font-family: Arial, Helvetica, sans-serif;
+}
+.para{
+    width: 1000px;
+    background-color: rgb(243, 236, 227);
+    padding: 15px;
+    border: 2px solid black;
+    border-radius: 5px;
+    margin: 50px auto;
+}
+.para:hover{
+    background-color: rgb(165, 165, 247);
+    cursor: pointer;
+}
+.center{
+    text-align: center;
+    font-weight: normal;
+    text-decoration: overline;
+    text-decoration-style: dotted ;
+}
+.start{
+    text-align: start;
+    font-weight: 800;
+    font-size: 24px;
+    text-decoration: underline;
+    text-decoration-style: wavy ;
+    
+}
+.end{
+    text-align: end;
+    font-weight: bold;
+    text-decoration: line-through;
+    text-decoration-style: dashed;
+    line-height: 80px;
+    letter-spacing: 5px;
+}
+.justify{
+    text-align: justify;
+    font-weight: bolder;
+}
+.boxes{
+    width: 1000px;
+    border: 1px solid black;
+    height: 300px;
+    margin: auto;
+    display: flex;
+    gap: 5px;
+    padding: 5px;
+}
+.box1{
+    background-color: blue;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: relative;
+    top: 15px;
+}
+.box2{
+    background-color: yellow;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+}
+.box3{
+    background-color: green;
+    width: 100px;
+    height: 100px;
+    border: 1px solid black;
+    position: absolute;
+    top: 15px;
+}
+.grid-container {
+    display: grid;
+    grid-template-columns: 100px 100px ;
+    
+    grid-gap: 10px; /* Gap between grid items */
+    margin: 20px auto;
+    width: 1000px;
+  }
+  
+  .item {
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    padding: 20px;
+    text-align: center;
+  }
+  @media(max-width:1074px){
+    .para{
+        width: 500px;
+    }
+    .boxes{
+        width: 500px;
+
+    }
+    .grid-container{
+        width: 500px;
+    }
+  }
+  
+  
