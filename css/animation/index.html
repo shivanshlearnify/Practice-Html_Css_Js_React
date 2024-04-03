@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    @keyframes example {
+        0% {
+            transform: scale(1);
+            background-color: red;
+        }
+        50% {
+            transform: scale(1.2);
+            background-color: blue;
+        }
+        100% {
+            transform: scale(1);
+            background-color: red;
+        }
+    }
+    .box{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        margin: 20px;
+        animation: example 4s ease-in-out;
+    }
+    @keyframes slidein {
+        0% {
+            transform: translateX(0%);
+        }
+        100% {
+            transform: translateX(500%);
+        }
+    }
+    @keyframes slideout {
+        0% {
+            transform: translateX(500%);
+        }
+        100% {
+            transform: translateX(0%);
+        }
+    }
+    .circle{
+        width: 100px;
+        height: 100px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: end;
+        animation: 3s linear slidein 3,
+        example 4s ease-in-out;
+    }
+    .circle2{
+        width: 100px;
+        height: 100px;
+        margin-top: 50px;
+        background-color: red;
+        border-radius: 50%;
+        display: flex;
+        justify-content: end;
+        animation: 3s linear slideout 3;
+    }
+    .main{
+        width: 100%;
+    }
+</style>
+<body>
+    <div class="main">
+
+        <div class="box"></div>
+        <div class="circle"></div>
+        <div class="circle2"></div>
+    </div>
+</body>
+</html>
