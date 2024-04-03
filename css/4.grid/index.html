@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-gap: 10px;
+    }
+
+    .grid button {
+        background-color: #ddd;
+        padding: 20px;
+        text-align: center;
+        border: none;
+    }
+
+    .gallery {
+        display: grid;
+        grid-gap: 10px;
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    }
+
+    .gallery img {
+        width: 100%;
+        height: auto;
+    }
+
+    .article {
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: 2fr 1fr;
+    }
+
+    .main-content {
+        background-color: #da3b3b;
+        padding: 20px;
+    }
+
+    .sidebar {
+        background-color: #f59d9d;
+        padding: 20px;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: auto 1fr auto;
+        grid-template-areas:
+            "header"
+            "main"
+            "sidebar"
+            "footer";
+        height: 100vh;
+    }
+
+    .header {
+        grid-area: header;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    .sidebar2 {
+        grid-area: sidebar;
+        background-color: #ddd;
+        padding: 10px;
+    }
+
+    .main {
+        grid-area: main;
+        background-color: #eee;
+        padding: 10px;
+    }
+
+    .footer {
+        grid-area: footer;
+        background-color: #333;
+        color: white;
+        padding: 10px;
+    }
+
+    /* Responsive Layout */
+    @media (min-width: 768px) {
+        .grid-container {
+            grid-template-columns: 200px 1fr;
+            grid-template-areas:
+                "header header"
+                "sidebar main"
+                "footer footer"
+            ;
+        }
+    }
+</style>
+
+<body>
+    <h2>Example of display-grid</h2>
+    <h2>Example 1 </h2>
+
+    <div class="grid">
+        <button>1</button>
+        <button>2</button>
+        <button>3</button>
+        <button>4</button>
+        <button>5</button>
+        <button>6</button>
+    </div>
+    <h2>Example 2</h2>
+    <div class="gallery">
+        <img src="https://images.pexels.com/photos/13289844/pexels-photo-13289844.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="1">
+        <img src="https://images.pexels.com/photos/7996007/pexels-photo-7996007.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="2">
+        <img src="https://images.pexels.com/photos/2166611/pexels-photo-2166611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
+            alt="3">
+    </div>
+    <h2>Example 3</h2>
+    <div class="article">
+        <div class="main-content">Main Content - Lorem ipsum dolor sit amet. </div>
+        <div class="sidebar">Sidebar Content - Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum, aperiam!
+        </div>
+
+    </div>
+    <h2>Example 4</h2>
+    <div class="grid-container">
+        <header class="header">Header</header>
+        <aside class="sidebar">Sidebar</aside>
+        <main class="main">Main Content</main>
+        <footer class="footer">Footer</footer>
+    </div>
+
+
+</body>
+
+</html>

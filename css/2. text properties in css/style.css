@@ -1,0 +1,39 @@
+.text1{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.text2{
+    font-size: 30px;
+}
+.text3{
+    font-weight: 200;
+}
+.text4{
+    font-style: italic;
+}
+.text5{
+    text-align: center;
+}
+.text6{
+    text-decoration: underline;
+}
+.text7{
+    text-decoration: overline;
+}
+.text8{
+    line-height: 55px;
+}
+.text9{
+    letter-spacing: 5px;
+}
+.text10{
+    word-spacing: 25px;
+}
+.text11{
+    color: aqua;
+}
+.text12{
+    text-transform: uppercase;
+}
+.text13{
+    text-transform: capitalize;
+}

@@ -1,0 +1,26 @@
+.box1{
+    width: 200px;
+    height: 200px;
+    background-color: blue;
+}
+
+.box2{
+    width: 200px;
+    height: 200px;
+    background-color: rgb(21, 158, 6);
+}
+
+.box3{
+    width: 200px;
+    height: 200px;
+    background-color: #0000FF;
+}
+.example1{
+    color: blue;
+}
+.example2{
+    color: rgb(21, 158, 6);
+}
+.example3{
+    color: #0000FF;
+}
