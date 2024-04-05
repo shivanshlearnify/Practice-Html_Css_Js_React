@@ -40,19 +40,20 @@
 // }
 
 // q6 while loop
-console.log('while loop');
-let i=1;
+// console.log('while loop');
+// let i=1;
 
-while (i<=5) {
-    console.log(i);
-    i++;
-}
+// while (i<=5) {
+//     console.log(i);
+//     i++;
+// }
 
 // q7 guess fav movie
 
 // let fav = 'avtar';
 // let guess = prompt('guess the movie');
 
-// while(fav === guess){
-//   guess =  prompt('guess');
+// while(fav != guess){
+//   guess =  prompt('Wrong guess. Try again');
+//   console.log("wrong guess");
 // }
