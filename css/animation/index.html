@@ -66,6 +66,22 @@
     .main{
         width: 100%;
     }
+    .loader {
+        width: 120px;
+        height: 120px;
+        border-radius: 50%;
+        border: 16px solid #f3f3f3;
+        border-top: 16px solid goldenrod;
+        animation: spin 2s linear infinite;
+    }
+    @keyframes spin{
+        0%{
+            transform: rotate(0deg);
+        }
+        100%{
+            transform: rotate(360deg);
+        }
+    }
 </style>
 <body>
     <div class="main">
@@ -73,6 +89,7 @@
         <div class="box"></div>
         <div class="circle"></div>
         <div class="circle2"></div>
+        <div class="loader"></div>
     </div>
 </body>
 </html>
