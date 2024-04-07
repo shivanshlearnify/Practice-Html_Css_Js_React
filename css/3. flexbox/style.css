@@ -65,7 +65,7 @@
 }
 
 .item:nth-child(2) {
-    flex-basis: 150px;
+    /* flex-basis: 150px; */
 }
 .container2 {
     display: flex;
