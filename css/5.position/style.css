@@ -86,7 +86,7 @@
     justify-content: center;
     color: aliceblue;
     text-transform: uppercase;
-    top: 20px;
+    /* top: 20px; */
     transform: translatex(+600px);
     z-index: 1000;
 }
@@ -106,6 +106,29 @@
     font-size: 24px;
     z-index: 1000;
 }
-.para{
-    margin-top: 100px;
+.paraPosition{
+    position:relative;
+    transform: translateX(80%)
+}
+.practice{
+    position:relative;
+}
+.container{
+    display:flex;
+    position: fixed;
+    background: blue;
+    width:100%;
+    align-items:center;
+}
+.container ul{
+    display:flex;
+    gap: 20px;
+    list-style-type: none;
+}
+.container h1{
+
+    color: white;
+}
+.container ul a{
+    color: white;
 }

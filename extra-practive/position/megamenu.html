@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    header{
+        background: #c4c4d7;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        max-width:1424px;
+        margin: 0 auto;
+        align-items:center;
+        
+    }
+    .megamenu{
+        display:inline-block;
+        margin-right:10px;
+        cursor:pointer;
+    }
+    .submenu{
+        position:absolute;
+    }
+</style>
+
+<body>
+    <Header>
+        <div class="navbar">
+            <div class="logo">Menga Menu</div>
+            <div class="">
+                <ul class="">
+                    <li class="megamenu">Home</li>
+                    <li class="megamenu">Menu 1
+                        <div class="submenu">
+                            <ul>
+                                <li>sub menu 1</li>
+                                <li>sub menu 2</li>
+                                <li>sub menu 3</li>
+                                <li>sub menu 4</li>
+                                <li>sub menu 5</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="megamenu">Menu 2</li>
+                </ul>
+            </div>
+            <div class="user">User</div>
+        </div>
+    </Header>
+</body>
+
+</html>
