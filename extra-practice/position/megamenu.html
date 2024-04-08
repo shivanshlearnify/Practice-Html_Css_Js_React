@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body{
+        margin:0;
+        padding:0;
+        font-family:Arial, Helvetica, sans-serif;
+    }
+    header{
+        background: #c4c4d7;
+    }
+    .navbar {
+        display: flex;
+        justify-content: space-between;
+        max-width:1424px;
+        margin: 0 auto;
+        align-items:center;
+        
+    }
+    .megamenu{
+        display:inline-block;
+        margin-right:10px;
+        cursor:pointer;
+    }
+    .submenu{
+        position:absolute;
+        /* margin-top:10px; */
+        background:white;
+        transform:translateX(-15%);
+        visibility:hidden;
+        box-shadow:0 1px 2px black;
+        top:5rem;
+        transition: all 0.3s linear;
+    }
+    .megamenu:hover .submenu{
+        visibility:visible;
+        top:3rem;
+        
+    }
+    ul{
+        padding:0;
+    }
+    ul li{
+        list-style:none;
+        margin:10px;
+    }
+    .boxes{
+        display:flex;
+        gap:10px;
+        height:80vh;
+        justify-content:center;
+        align-items:center;
+        border: 1px solid black;
+    }
+    .box{
+        width:150px;
+        height:150px;
+    }
+    .box1{
+        /* position:absolute; */
+        background:green;
+    }
+    .box2{
+        position:absolute;
+        background:blue;
+        top:100px;
+    }
+    .box3{
+        /* position:absolute; */
+        background:rgb(142, 142, 192)
+    }
+</style>
+
+<body>
+    <Header>
+        <div class="navbar">
+            <div class="logo">Menga Menu</div>
+            <div class="">
+                <ul class="">
+                    <li class="megamenu">Home</li>
+                    <li class="megamenu">Menu 1
+                        <div class="submenu">
+                            <ul>
+                                <li>sub menu 1</li>
+                                <li>sub menu 2</li>
+                                <li>sub menu 3</li>
+                                <li>sub menu 4</li>
+                                <li>sub menu 5</li>
+                            </ul>
+                        </div>
+                    </li>
+                    <li class="megamenu">Menu 2
+                        <div class="submenu">
+                            <ul>
+                                <li>sub menu 6</li>
+                                <li>sub menu 7</li>
+                                <li>sub menu 8</li>
+                                <li>sub menu 9</li>
+                                <li>sub menu 10</li>
+                            </ul>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+            <div class="user">User</div>
+        </div>
+    </Header>
+    <div class="boxes">
+        <div class="box box1"></div>
+        <div class="box box2"></div>
+        <div class="box box3"></div>
+    </div>
+</body>
+
+</html>
