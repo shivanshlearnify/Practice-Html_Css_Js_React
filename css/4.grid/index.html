@@ -9,7 +9,12 @@
 <style>
     .grid {
         display: grid;
-        grid-template-columns: 1fr 1fr 1fr;
+        /* grid-template-columns: 1fr 1fr 1fr;  */
+        /* we can give name to our rows and col also with this properties like 
+        grid-template-columns: [line 1] 1fr [line 2] 1fr [line 3] 1fr; */
+        /* we can use repeat property if we have to make so many col and rows */
+        grid-template-columns: repeat(3, 1fr);
+        /* grid-template-columns: repeat(count, property); */
         grid-template-rows: 1fr 2fr 1fr;
         grid-gap: 10px;
     }
@@ -33,6 +38,8 @@
         display: grid;
         grid-gap: 10px;
         grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+        /* using auto-fit helps in making it responsive */
+        /* minmax(minimum, maximum) */
     }
 
     .gallery img {
@@ -97,11 +104,11 @@
     /* Responsive Layout */
     @media (min-width: 768px) {
         .grid-container {
-            grid-template-columns: 200px 1fr;
+            grid-template-columns: 1fr 0.5fr 4fr;
             grid-template-areas:
-                "header header"
-                "sidebar main"
-                "footer footer"
+                "header header header"
+                "sidebar empty main"
+                "footer footer footer"
             ;
         }
     }
@@ -110,7 +117,7 @@
 <body>
     <h2>Example of display-grid</h2>
     <p>grid line, grid cell, grid track, grid area</p>
-    <p>we can change position of our grid by using grid-row:start point of line/end point of line and for grid-col : same as row</p>
+    <p>we can change position of our grid by using grid-row:start point of line/end point of line and for grid-col : same as row or we can write grid-row-start and grid-row-end</p>
     <h2>Example 1 </h2>
 
     <div class="grid">
