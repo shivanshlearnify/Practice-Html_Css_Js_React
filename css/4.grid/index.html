@@ -10,11 +10,20 @@
     .grid {
         display: grid;
         grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: 1fr 2fr 1fr;
         grid-gap: 10px;
+    }
+    .btn6{
+        grid-row: 2/3;
+        grid-column: 2/3;
+    }
+    .btn1{
+        grid-row: 2/3;
+        grid-column: 2/3;
     }
 
     .grid button {
-        background-color: #ddd;
+        /* background-color: #ddd; */
         padding: 20px;
         text-align: center;
         border: none;
@@ -100,15 +109,19 @@
 
 <body>
     <h2>Example of display-grid</h2>
+    <p>grid line, grid cell, grid track, grid area</p>
+    <p>we can change position of our grid by using grid-row:start point of line/end point of line and for grid-col : same as row</p>
     <h2>Example 1 </h2>
 
     <div class="grid">
-        <button>1</button>
-        <button>2</button>
+        <button class="btn1">1</button>
+        <button >2</button>
         <button>3</button>
         <button>4</button>
         <button>5</button>
-        <button>6</button>
+        <button class="btn6">6</button>
+        <button>7</button>
+        <button>8</button>
     </div>
     <h2>Example 2</h2>
     <div class="gallery">
