@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .container {
+    position: relative;
+    width: 300px;   
+}
+
+.image {
+    width: 100%;
+    height: auto;
+}
+
+.overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 10px;
+    display: none; 
+}
+
+.container:hover .overlay {
+    display: block; 
+}
+
+</style>
+<body>
+    <div class="container">
+        <img src="https://images.pexels.com/photos/5622388/pexels-photo-5622388.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="Example Image" class="image">
+        <div class="overlay">This is the overlay box</div>
+    </div>
+    
+
+    
+</body>
+</html>

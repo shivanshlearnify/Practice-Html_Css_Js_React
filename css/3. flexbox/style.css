@@ -34,11 +34,17 @@
 .one {
     background-color: aquamarine;
     padding: 12px;
+    height:40px;
+    width: 40px;;
 }
 
 .flex4 {
     display: flex;
     justify-content: center;
+    border: 1px solid black;
+    height:40vh;
+    gap: 5px;
+    align-items: center;
 }
 
 .onebox {
