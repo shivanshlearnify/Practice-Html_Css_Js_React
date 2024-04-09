@@ -13,6 +13,17 @@
     <p>justify content work on main axis(main axis in which direction is set) <br> and align items 
     work on cross axis(oppostite of direction defined)
     </p>
+    <p>if we have multiple line content in a container<br> if we use
+        align-item center it will create space in between to get rid of space we use align-content
+    </p>
+    <p>gap, row-gap, column-gap --> gap: for row, for column(shorthand)</p>
+    <h3>Property used in flexbox for items</h3>
+    <p>to change the order of any item we can use (order:any number;) smaller number order comes first larger goes in last</p>
+    <p>flex grow:1 By this property if space is available in main axis it will increase its width to cover its whole width <br>
+       if we have two items for one flex-grow is 1 and for second flex-grow is 2 with 2 it will have double space cmparison with 1 </p>
+    <p>we have flex-shrink when we make our screen in smaller size it will decrease it width <br>
+         flex-shrink:0 means it will prevent it from shrinking <br>
+        flex-shrink:1 means it will proportionally with the other flex items </p>
     <h1>Example 1 - Display Flex</h1>
     <div class="flex1">
         <div class="one">one </div>
@@ -56,13 +67,44 @@
         <div class="one">box</div>
         <div class="one">box</div>
         <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one">box</div>
+        <div class="one1">box</div>
     </div>
     <h1>Exapmle 5 - Align item</h1>
     <div class="flex5">
         <div class="onebox">box</div>
 
     </div>
-    <h1>Exapmle 6 - flex-grow flex-shrink flex-basis</h1>
+    <h1>Exapmle 6 - flex-grow flex-shrink</h1>
+    <!-- <h3>Preventing from shrinking</h3> -->
+    <div class="container3">
+        <div class="item3">Item 1</div>
+        <div class="item3">Item 2</div>
+        <div class="item3">Item 3</div>
+    </div>
     <h3>Flex grow equally</h3>
     <div class="container">
         <div class="item">Item 1</div>
@@ -75,12 +117,13 @@
         <div class="item2">Item 2</div>
         <div class="item2">Item 3</div>
     </div>
-    <h3>Preventing from shrinking</h3>
-    <div class="container3">
-        <div class="item3">Item 1</div>
-        <div class="item3">Item 2</div>
-        <div class="item3">Item 3</div>
-    </div>
+    <div class="container12">
+        <div class="item12">Item 1</div>
+        <div class="item12">Item 2</div>
+        <div class="item12 item13">Item 3</div>
+        <div class="item12">Item 4</div>
+      </div>
+      
 </body>
 
 </html>

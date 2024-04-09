@@ -35,8 +35,16 @@
     background-color: aquamarine;
     padding: 12px;
     height:40px;
-    width: 40px;;
+    /* width: 40px;  */
+    /* flex-grow:1; */
 }
+/* .one1 {
+    background-color: aquamarine;
+    padding: 12px;
+    height:40px;
+    width: 40px;
+    flex-grow:2;
+} */
 
 .flex4 {
     display: flex;
@@ -44,7 +52,9 @@
     border: 1px solid black;
     height:40vh;
     gap: 5px;
-    align-items: center;
+    /* align-items: center; */
+    flex-wrap:wrap;
+    align-content:center;
 }
 
 .onebox {
@@ -94,15 +104,37 @@
 }
 
 .item3 {
-    flex-grow: 1;
-    flex-shrink: 0;
-    flex-basis: auto;
+    /* flex-grow: 1; */
+    /* flex-basis: auto; */
     background-color: lightblue;
     margin: 5px;
     padding: 10px;
     text-align: center;
+    width:400px
+    
 }
 
 .item3:nth-child(2) {
-    flex-basis: 200px;
+    flex-shrink: 2;
+    /* flex-basis: 200px; */
 }
+.container12 {
+    display: flex;
+    /* flex-wrap: wrap; */
+    width: 80vw;
+    border: 2px solid #333;
+    padding: 10px;
+  }
+  
+  .item12 {
+    flex-grow: 1;
+    flex-basis: 100px; /* Default flex-basis */
+    background-color: lightblue;
+    border: 1px solid blue;
+    margin: 5px;
+  }
+  
+  .item13 {
+    /* flex-basis: 400px   ; Overriding flex-basis for item3 */
+  }
+  
