@@ -39,8 +39,84 @@
 // console.log(a);
 // let a;
 
-function avg(a, b) {
-    console.log("done");
-    return (a + b) / 2;
-}
-console.log(avg(2, 2));
+// function avg(a, b) {
+//     console.log("done");
+//     return (a + b) / 2;
+// }
+// console.log(avg(2, 2));
+
+// illegal shadowing
+
+// function test() {
+//     var a = "hey";
+//     var a = "y";
+//     console.log(a);
+
+//     if (true) {
+//         var a = "bye";
+//         console.log(a);
+//     }
+//     console.log(a);
+// }
+// test();
+
+// declaration
+
+// not work
+// const a; 
+// const a;
+
+// function scope
+
+// let num1 = 20;
+// let num2 = 2;
+// let name = "shivansh";
+
+// function multiply() {
+//     return num1 * num2;
+// }
+
+// console.log(multiply());
+
+// function getscore(){
+//     let num1 = 2;
+//     let num2 = 2;
+//     function add(){
+//         return name + (num1+num2);
+//     }
+//     return add();
+// }
+// console.log(getscore());
+
+// for (let i = 0; i < 5; i++) {
+//     setTimeout(function () {
+//        console.log(i);
+//     },i*1000);
+// }
+
+// const x =20;
+
+// var fun = function() {
+//     console.log(x);
+//     const x = 2;
+// };
+
+// fun();
+
+// const fn = (a,x,y,...num)=>{
+//     console.log(num,a,x,y)
+// };
+// fn(2,5,4,8,9,78,1,6);
+
+let user = {
+    name: "shivansh",
+    rc: () => {
+        console.log("hey " + this.name);
+    },
+    rc2 () {
+        console.log("hey " + this.name);
+    },
+};
+
+user.rc();
+user.rc2();
