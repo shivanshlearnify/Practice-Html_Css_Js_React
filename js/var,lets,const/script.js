@@ -108,15 +108,16 @@
 // };
 // fn(2,5,4,8,9,78,1,6);
 
-let user = {
-    name: "shivansh",
-    rc: () => {
-        console.log("hey " + this.name);
-    },
-    rc2 () {
-        console.log("hey " + this.name);
-    },
-};
+// let user = {
+//     name: "shivansh",
+//     rc: () => {
+//         console.log("hey " + this.name);
+//     },
+//     rc2 () {
+//         console.log("hey " + this.name);
+//     },
+// };
 
-user.rc();
-user.rc2();
+// user.rc();
+// user.rc2();
+
