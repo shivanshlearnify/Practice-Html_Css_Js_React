@@ -9,15 +9,15 @@
 <style>
     .grid {
         display: grid;
+        grid-gap: 10px;
         /* grid: 1fr 4fr 1fr / 1fr 1fr 1fr;  */
+        /* grid-template-rows: 1fr 4fr 1fr; */
         /* grid-template-columns: 1fr 1fr 1fr;  */
         /* we can give name to our rows and col also with this properties like 
         grid-template-columns: [line 1] 1fr [line 2] 1fr [line 3] 1fr; */
         /* we can use repeat property if we have to make so many col and rows */
-        grid-template-columns: repeat(3, 1fr);
         /* grid-template-columns: repeat(count, property); */
-        /* grid-template-rows: 1fr 4fr 1fr; */
-        grid-gap: 10px;
+        grid-template-columns: repeat(3, 1fr);
     }
 
     .btn6 {
