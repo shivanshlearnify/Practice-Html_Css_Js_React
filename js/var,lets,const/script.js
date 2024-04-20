@@ -1,8 +1,21 @@
+
+
+
 // var is globally scoped where let and const are blocked scope
 
 
 // var a = 5;
 // console.log(a);
+// var x = 10;
+// function example() {
+//   var y = 20;
+//   console.log(x); // 10
+//   console.log(y); // 20
+// }
+// example();
+// console.log(x); // 10
+// console.log(y); // ReferenceError: y is not defined
+
 
 // {
 //     var a = 25;
@@ -121,3 +134,11 @@
 // user.rc();
 // user.rc2();
 
+const arr = [1, 2, 3];
+
+const sum = arr.reduce((acc, curr) => {
+  // console.log(acc);
+  
+  return acc + curr;
+},1);
+console.log(sum);
