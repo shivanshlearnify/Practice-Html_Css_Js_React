@@ -1,9 +1,6 @@
 
 
 
-// var is globally scoped where let and const are blocked scope
-
-
 // var a = 5;
 // console.log(a);
 // var x = 10;
@@ -134,11 +131,21 @@
 // user.rc();
 // user.rc2();
 
-const arr = [1, 2, 3];
+// const arr = [1, 2, 3];
 
-const sum = arr.reduce((acc, curr) => {
-  // console.log(acc);
-  
-  return acc + curr;
-},1);
-console.log(sum);
+// const sum = arr.reduce((acc, curr) => {
+//   // console.log(acc);
+
+//   return acc + curr;
+// },1);
+
+
+// {var sum;}
+
+let arr = [1, 2, 3, 4, 5];
+for (const i = 0; i < arr.length; i++) {
+  setTimeout(function () {
+    console.log(i);
+  }, 1000 * i);
+}
+
