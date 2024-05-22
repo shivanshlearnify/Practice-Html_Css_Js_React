@@ -1,0 +1,50 @@
+// function a(){
+//     let a = 10;
+//     function y (x){
+//         console.log(a*x)
+//     }
+//     a = 5;
+//     return y
+// }
+// let b = a()
+
+// b(4)
+
+// function x() {
+
+//     for (var i = 0; i <= 10; i++) {
+//         function close(i) {
+
+//             setTimeout(function () {
+//                 console.log(i)
+//             }, i * 1000)
+//         }
+//         close(i)
+//     }
+// }
+
+// x()
+
+
+
+// let outer = () => {
+//     return (num2) => {
+//         console.log(num2*2)
+//     }
+// }
+
+// let cal = outer();
+// cal(10)
+// console.log("hey")
+// let cal2 = outer();
+// cal(20)
+
+// function outer(){
+//     let a = 10;
+//     return function(){
+//         console.log(a)
+//     }
+// }
+
+// console.log(a)
+

@@ -48,3 +48,75 @@
 // }
 // console.log(a)
 
+// --------------------------------------------------------------------------- question 6
+
+// how java execution will work here   --> in creation phase first foo is undefined and it will replace it with a function
+
+// foo();
+// console.log(foo)
+// var foo = 20;
+// function foo(){
+//     console.log("calling foo")
+// }
+// foo();
+
+// --------------------------------------------------------------------------- question 7
+
+// foo();
+// function foo(){
+//     console.log("calling foo")
+// }
+// foo();
+// var foo = 20;
+
+// --------------------------------------------------------------------------- question 8
+
+// var foo = 20;
+// foo();
+// function foo(){
+//     console.log("calling foo")
+// }
+// foo();
+
+// --------------------------------------------------------------------------- question 8
+
+
+// function foo() {
+//     function bar() {
+//         return 5
+//     }
+//     return bar()
+//     function bar() {
+//         return 10
+//     }
+// }
+// console.log(foo())
+
+// --------------------------------------------------------------------------- question 9
+
+// function a() {
+//     var b = function () {
+//         return 3;
+//     };
+//     return b();
+//     var b = function () {
+//         return 8;
+//     };
+// }
+// console.log(a());
+
+// --------------------------------------------------------------------------- question 10
+
+// setTimeout(() => {
+//     console.log('hi')
+// }, 0)
+// async function greet(name) {
+//     console.log("first", name);
+//     await console.log("middle", name)
+//     console.log("last", name)
+// }
+// greet("sachin")
+// greet("rahul")
+// console.log('end')
+
+
