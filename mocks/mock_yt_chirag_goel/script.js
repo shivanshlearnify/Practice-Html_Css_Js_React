@@ -52,4 +52,38 @@
 // console.log(obj2.helloWorld.call(obj));
 
 
+// --------------------------------------------------------- question 3
 
+
+// let p2 = () => new Promise((resolve, reject) =>
+//     reject("got rejected")
+// )
+// let p1 = () => new Promise((resolve, reject) => {
+//     let r2 = Math.random()
+//     const randomNum = r2 > 0.5;
+//     console.log(r2);
+//     if (randomNum) {
+//         resolve("p1 resolved")
+//     } else {
+//         reject("p1 rejected")
+//     }
+// }
+// )
+
+// async function fetchWithAutoRetry(fetcher, maxtry = 1) {
+//     if (maxtry > 0) {
+//         try {
+//             const result = await fetcher();
+//             return result;
+//         } catch (error) {
+//             console.log(maxtry);
+//             const result = await fetchWithAutoRetry(fetcher, maxtry - 1);
+//             return result;
+//         }
+//     } else {
+//         throw new Error("reached maximum tries")
+//     }
+// }
+
+// const result = fetchWithAutoRetry(p1, 3);
+// result.then((data) => console.log(data)).catch((e) => console.log(e));
