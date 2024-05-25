@@ -1,0 +1,72 @@
+<!DOCKTYPE>
+<html>
+  <head>
+    <title>Practice</title>
+  </head>
+  <style>
+      body {
+    }
+    @keyframes animate{
+        0%{
+            transform:translatex(0%)
+        }
+        100%{
+            transform:translatex(60%)
+        }
+    }
+    .container {
+        background-color: black;
+        padding: 20px;
+        width: 800px;
+    }
+    .subcontainer{
+        display: flex;
+        flex-direction: column-reverse;
+        gap: 20px;
+        
+    }
+    .circle {
+        width: 50px;
+        height: 50px;
+        background-color: yellow;
+        border-radius: 50%;
+    }
+    .line {
+        display: flex;
+        gap: 25px;
+    }
+    @media screen and (max-width: 1000px) {
+        .subcontainer{
+            flex-direction: column;
+            /* align-items: end; */
+            /* transform: translateX(60%); */
+            animation: animate 0.9s linear;
+        }
+
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="subcontainer">
+        <div class="line">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="line">
+          <div class="circle"></div>
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div class="line">
+          <div class="circle"></div>
+          <div class="circle"></div>
+        </div>
+        <div line="line">
+          <div class="circle"></div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
