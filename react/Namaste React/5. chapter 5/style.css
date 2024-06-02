@@ -30,6 +30,13 @@
   display: flex;
   flex-wrap: wrap;
 }
+.shimmer-container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 85%;
+  margin: auto;
+  margin-top: 85px;
+}
 .res-card {
   width: 300px;
   height: 300px;
@@ -37,6 +44,13 @@
   border-radius: 8px;
   margin: 10px;
   cursor: pointer;
+}
+.shimmer-card {
+  width: 300px;
+  height: 300px;
+  background-color: rgba(214, 214, 214, 0.116);
+  border-radius: 8px;
+  margin: 10px;
 }
 .res-card:hover {
   box-shadow: 5px 5px 5px rgb(197, 197, 197);
@@ -47,7 +61,13 @@
   height: 60%;
   border-radius: 8px 8px 0 0;
 }
-.btn-Filter{
+.shimmer-card-img {
+  background-color: rgba(214, 214, 214, 0.664);
+  width: 100%;
+  height: 60%;
+  border-radius: 8px 8px 0 0;
+}
+.btn-Filter {
   width: 88px;
   border-radius: 4px;
   border: none;
@@ -57,4 +77,14 @@
   cursor: pointer;
   font-size: 14px;
   margin-top: 50px;
+}
+.filter {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+.search {
+  margin-top: 50px;
+  display: flex;
+  gap: 5px;
 }
