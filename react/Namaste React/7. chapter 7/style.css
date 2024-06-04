@@ -88,3 +88,29 @@
   display: flex;
   gap: 5px;
 }
+.menuPage{
+  max-width: 80%;
+  margin: auto;
+  margin-top: 50px;
+  color: rgba(49, 49, 49, 0.87);
+}
+.cross{
+  text-decoration: line-through;
+}
+.menuName{
+  margin: 15px 0;
+}
+.menuitem{
+  display: flex;
+  justify-content: space-between;
+}
+.menu-Img{
+  width: 150px;
+  height: 150px;
+  border-radius: 8px;
+}
+.line{
+  border: 1px solid rgba(56, 56, 56, 0.637);
+  width: 100%;
+  margin: 15px auto;
+}

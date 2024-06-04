@@ -26,12 +26,12 @@ const Body = () => {
     );
     const json = await data.json();
 
-    setResListData(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
-    setFiltered(
-      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle?.restaurants
-    );
+    const restaurants =
+      json?.data?.cards[1]?.card?.card?.gridElements?.infoWithStyle
+        ?.restaurants || [];
+
+    setResListData(restaurants);
+    setFiltered(restaurants);
   };
 
   return resListData.length === 0 ? (
