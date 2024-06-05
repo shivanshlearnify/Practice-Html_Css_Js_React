@@ -5,12 +5,11 @@ import { useParams } from "react-router-dom";
 import { MENU_API } from "../utils/constant";
 
 const RestaurantMenu = () => {
-  const [menuData, setMenuData] = useState(null);
   const { resId } = useParams();
 
   useEffect(() => {
     fetchMenu();
-  }, [resId]);
+  }, []);
 
   const fetchMenu = async () => {
     try {
