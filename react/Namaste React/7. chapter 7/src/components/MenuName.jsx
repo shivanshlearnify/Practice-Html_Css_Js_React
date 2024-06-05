@@ -18,6 +18,7 @@ const MenuName = ({ itemCards }) => {
       setActiveVegFilter(false);
     }
   };
+  console.log(itemCards);
 
   return (
     <div className="foodItem">

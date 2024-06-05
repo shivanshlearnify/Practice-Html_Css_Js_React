@@ -1,37 +1,41 @@
 import { useEffect, useState } from "react";
 import Shimmer from "./Shimmer";
 import MenuName from "./MenuName";
+import { useParams } from "react-router-dom";
+import { MENU_API } from "../utils/constant";
 
 const RestaurantMenu = () => {
   const [menuData, setMenuData] = useState(null);
+  const { resId } = useParams();
+
   useEffect(() => {
     fetchMenu();
-  }, []);
+  }, [resId]);
 
   const fetchMenu = async () => {
-    // const data = await fetch(`https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=${resId}&catalog_qa=undefined&submitAction=ENTER`);
-    const data = await fetch(
-      "https://www.swiggy.com/dapi/menu/pl?page-type=REGULAR_MENU&complete-menu=true&lat=18.5204303&lng=73.8567437&restaurantId=326931&catalog_qa=undefined&submitAction=ENTER"
-    );
-    const json = await data.json();
-    setMenuData(json?.data);
+    try {
+      const response = await fetch(MENU_API + resId);
+      const data = await response.json();
+      setMenuData(data?.data);
+    } catch (error) {
+      console.error("Error fetching menu:", error);
+    }
   };
 
+  if (!menuData) return <Shimmer />;
 
-
-  if (menuData === null) return <Shimmer />;
   const {
     name,
     city,
     avgRating,
     costForTwoMessage,
-    cuisines,
+    cuisines = [],
     totalRatingsString,
     sla,
-  } = menuData.cards?.[2].card.card.info;
+  } = menuData?.cards?.[2]?.card?.card?.info || {};
 
-  const { itemCards } =
-    menuData.cards?.[4].groupedCard.cardGroupMap.REGULAR.cards[1].card.card;
+  const itemCards =
+    menuData?.cards?.[4]?.groupedCard?.cardGroupMap?.REGULAR?.cards?.[1]?.card?.card?.itemCards || [];
 
   return (
     <div className="menuPage">
@@ -41,13 +45,14 @@ const RestaurantMenu = () => {
         </h1>
         <h2>{cuisines.join(", ")}</h2>
         <h2>
-          {avgRating}({totalRatingsString})
+          {avgRating} ({totalRatingsString})
         </h2>
         <h2>{sla?.minDeliveryTime} min Minimum Delivery Time</h2>
         <h2>{costForTwoMessage}</h2>
       </div>
-      <MenuName itemCards={itemCards}/>
+      <MenuName itemCards={itemCards} />
     </div>
   );
 };
+
 export default RestaurantMenu;
