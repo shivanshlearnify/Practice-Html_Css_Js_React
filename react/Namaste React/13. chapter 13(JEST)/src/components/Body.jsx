@@ -81,9 +81,9 @@ const Body = () => {
               to={"/restaurant/" + restaurant.info.id}
             >
               {restaurant.info.avgRating > 4.3 ? (
-                <RestaurandCardPromoted resData={restaurant} />
+                <RestaurandCardPromoted resData={restaurant?.info} />
               ) : (
-                <RestaurantCard resData={restaurant} />
+                <RestaurantCard resData={restaurant?.info} />
               )}
             </Link>
           );

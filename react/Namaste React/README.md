@@ -95,7 +95,7 @@ import {Component} from "path";
  - Configure Parcel Config file to disable default babel transpilation ( As our new configure babel file will conflict with already file in parcel bundler babel file)
  - Jest  - npx jest --init    (choose jsdom ---  coverage report Yes ---  provider babel --- automatic clear (yes))
  - Install jsdom library (from React Testing Library website  ----- section react testing library --- setup --- jest28)
- - Install @babel/preset-react - to make JSX work in test cases
- - Include @babel/preset-react inside my babel config
+ - npm i @babel/preset-react (Install @babel/preset-react - to make JSX work in test cases)
+ - ["@babel/preset-react", { runtime: "automatic" }] (Include @babel/preset-react inside my babel config)
  - npm i -D @testing-library/jest-dom
  

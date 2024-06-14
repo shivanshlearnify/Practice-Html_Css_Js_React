@@ -7,7 +7,8 @@ const RestaurantCard = ({ resData }) => {
     cloudinaryImageId,
     totalRatingsString,
     avgRating,
-  } = resData?.info;
+  } = resData;
+  console.log(resData);
   return (
     <div className="res-card">
       <img className="res-cardImg" src={CDN_URL + cloudinaryImageId} alt={name}/>
