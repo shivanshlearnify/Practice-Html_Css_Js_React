@@ -8,6 +8,15 @@
 - SignUp Form (with form validation from scratch)
 - Form validation
 - useRef Hook
+- Firebase setup
+- Deploying our app to production
+- Create Signup user account
+- implement sign In user with firebase
+- created Redux store named app store
+- created userSlice in app store
+- Implemented Sign Out
+- Update Profile and user name api
+- Fetch from TMDB Api
 
 
 
