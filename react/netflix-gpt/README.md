@@ -16,8 +16,12 @@
 - created userSlice in app store
 - Implemented Sign Out
 - Update Profile and user name api
+- Bug fix - Display name and profile pic when signOut
 - Bug fix - if the user is not login it (can't access the browse page)  and if login (can't access the login or signup page) **
-- Fetch from TMDB Api
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded value to the constant file
+- Register TMDB API & create an app and get acess token 
+- get data from tmdb (now playing movies list api)
 
 
 
