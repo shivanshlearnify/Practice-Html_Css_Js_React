@@ -16,6 +16,7 @@
 - created userSlice in app store
 - Implemented Sign Out
 - Update Profile and user name api
+- Bug fix - if the user is not login it (can't access the browse page)  and if login (can't access the login or signup page) **
 - Fetch from TMDB Api
 
 
