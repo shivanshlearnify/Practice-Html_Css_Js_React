@@ -4,11 +4,15 @@ import { useNavigate } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
 import { useEffect } from "react";
 import { addUser, removeUser } from "../utils/userSlice";
-import { LOGO } from "../utils/constant";
+import { LOGO, SUPPORTED_LANGUAGES } from "../utils/constant";
+import { toggleGPTSearchView } from "../utils/gptSlice";
+import { changeLanguage } from "../utils/configSlice";
 
 const Header = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const showSearch = useSelector((store) => store.gptSearch.showGPTSearch);
 
   const user = useSelector((store) => store.user);
 
@@ -21,6 +25,14 @@ const Header = () => {
         // An error happened.
         navigate("/error");
       });
+  };
+
+  const handleGPT = () => {
+    dispatch(toggleGPTSearchView());
+  };
+
+  const handleLanguageChange = (e) => {
+    dispatch(changeLanguage(e.target.value));
   };
 
   useEffect(() => {
@@ -36,11 +48,11 @@ const Header = () => {
             photoURL: photoURL,
           })
         );
-        navigate("/browse")
+        navigate("/browse");
       } else {
         // User is signed out
         dispatch(removeUser());
-        navigate("/")
+        navigate("/");
       }
     });
 
@@ -50,14 +62,33 @@ const Header = () => {
 
   return (
     <div className="absolute w-full bg-gradient-to-b from-black px-8 py-2 z-10 flex justify-between">
-      <img
-        className="w-44"
-        src={LOGO}
-        alt="Logo"
-      />
+      <img className="w-44" src={LOGO} alt="Logo" />
       {user && (
-        <div className="flex p-2">
-          <img className="w-12 h-12" src={user?.photoURL} alt="avtar" />
+        <div className="flex p-2 gap-2">
+          {showSearch && (
+            <select
+              className="p-2 m-2 bg-gray-900 text-white"
+              onChange={handleLanguageChange}
+            >
+              {SUPPORTED_LANGUAGES.map((lang) => (
+                <option key={lang.identifier} value={lang.identifier}>
+                  {lang.name}
+                </option>
+              ))}
+            </select>
+          )}
+
+          <button
+            onClick={handleGPT}
+            className="py-2 px-4 m-2 text-white bg-purple-600 rounded-md"
+          >
+            {showSearch ? "Homepage" : "GPT-Search"}
+          </button>
+          <img
+            className="w-12 h-12 rounded-lg"
+            src={user?.photoURL}
+            alt="avtar"
+          />
           <button onClick={handleSignOut} className="font-bold text-white">
             (SignOut)
           </button>
