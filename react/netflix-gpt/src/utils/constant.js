@@ -24,4 +24,4 @@ export const SUPPORTED_LANGUAGES = [
   { identifier: "spanish", name: "Spanish" },
 ];
 
-export const OPENAI_API_KEY = "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";
+
