@@ -85,46 +85,45 @@
 
 // create throttle() pollfill implementaion
 
-// const btn = document.querySelector(".increment_btn")
-// const btnpress = document.querySelector(".increment_pressed")
-// const count = document.querySelector(".increment_count")
+const btn = document.querySelector(".increment_btn")
+const btnpress = document.querySelector(".increment_pressed")
+const count = document.querySelector(".increment_count")
 
-// var pressedCount = 0;
-// var triggerCount = 0;
+var pressedCount = 0;
+var triggerCount = 0;
 
-// const myThrottle = (cb, dtime) => {
-//     let timer = 0;
-//     let firstCall = true;
-//     // approach 1 -- use this 
-//     return  (...args) => {
-//         let now = new Date().getTime();
-//         if (now - timer < dtime) return;
-//         timer = now;
-//         return cb.apply(this, args);
-//     }
-//     // approach 2
-//     // return function (...args) {
-//     //     if (firstCall) {
-//     //         firstCall = false;
-//     //         cb.apply(this, args);
-//     //         return
-//     //     }
-//     //     if (timer) return;
-//     //     timer = setTimeout(() => {
-//     //         timer = 0;
-//     //         cb.apply(this, args);
-//     //     }, dtime)
-//     // }
-// }
+const myThrottle = (cb, dtime) => {
+    let timer = 0;
+    // approach 1 -- use this 
+    return  (...args) => {
+        let now = new Date().getTime();
+        if (now - timer < dtime) return;
+        timer = now;
+        cb(...args)
+    }
+    // approach 2
+    // return function (...args) {
+    //     if (firstCall) {
+    //         firstCall = false;
+    //         cb.apply(this, args);
+    //         return
+    //     }
+    //     if (timer) return;
+    //     timer = setTimeout(() => {
+    //         timer = 0;
+    //         cb.apply(this, args);
+    //     }, dtime)
+    // }
+}
 
-// const throttleCount = myThrottle(() => {
-//     count.innerHTML = ++triggerCount
-// }, 5000)
+const throttleCount = myThrottle(() => {
+    count.innerHTML = ++triggerCount
+}, 1000)
 
-// btn.addEventListener("click", () => {
-//     btnpress.innerHTML = ++pressedCount
-//     throttleCount()
-// });
+btn.addEventListener("click", () => {
+    btnpress.innerHTML = ++pressedCount
+    throttleCount()
+});
 
 
 

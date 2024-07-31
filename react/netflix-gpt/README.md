@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
@@ -68,3 +69,69 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+=======
+# NETFLX-GPT
+
+- Create React App
+- Configured Tailwind css
+- Header
+- Routing of App
+- Login Form (with form validation from scratch)
+- SignUp Form (with form validation from scratch)
+- Form validation
+- useRef Hook
+- Firebase setup
+- Deploying our app to production
+- Create Signup user account
+- implement sign In user with firebase
+- created Redux store named app store
+- created userSlice in app store
+- Implemented Sign Out
+- Update Profile and user name api
+- Bug fix - Display name and profile pic when signOut
+- Bug fix - if the user is not login it (can't access the browse page)  and if login (can't access the login or signup page) **
+- Unsubscribed to the onAuthStateChanged callback
+- Add hardcoded value to the constant file
+- Register TMDB API & create an app and get acess token 
+- get data from tmdb (now playing movies list api)
+- CustomHook for now playing movies 
+- Create movieSlice
+- Update Store with movies Data
+- Planning for MainContauiner & secondary container
+- Fetch Data for Trailer Video
+- Update Store with Trailer Video Data
+- Embedded the Yotube video and make it autoplay and mute
+- Tailwind Classes to make Main Container look awesome
+- Build Secondary Component
+- Build Movie List
+- build Movie Card
+- TMDB Image CDN URL
+- Made the Browsre page amazing with Tailwind CSS
+- usePopularMovies Custom hook
+- GPT Search Page
+- GPT Search Bar
+- (BONUS) Multi-language Feature in our App
+- Get Open AI Api Key
+- Gpt Search API Call
+- fetched gptMoviesSuggestions from TMDB
+- created gptSlice added data
+- Resused Movie List component to make movie suggestion container
+- Memoization
+- Added .env file
+- Adding .env file to gitignore
+- Made our Site Responsive
+
+
+# Features
+
+- Login/SignUp Page
+- Browse Page(after Authentication)
+   - Header
+   - Main Movie
+     - Trailer in Background
+     - Title and Description
+   - Movie Suggestion
+- NetflixGPT
+   - Search Bar
+   - Movie Suggestions
+>>>>>>> ac8108670dcbbb12186b3a8755ac57266ef075c1

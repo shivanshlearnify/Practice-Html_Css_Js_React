@@ -115,3 +115,15 @@
 //     },
 // };
 // obj3.method(callback, 2, 3);
+
+
+function makeUser (){
+    return {
+        name:"shiv",
+        ref:this
+    }
+  
+}
+
+let user = makeUser();
+console.log(user.ref);

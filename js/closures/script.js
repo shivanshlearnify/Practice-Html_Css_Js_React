@@ -35,16 +35,10 @@
 
 // let cal = outer();
 // cal(10)
-// console.log("hey")
+
 // let cal2 = outer();
-// cal(20)
+// cal2(20)
 
-// function outer(){
-//     let a = 10;
-//     return function(){
-//         console.log(a)
-//     }
-// }
 
-// console.log(a)
+
 
